@@ -69,7 +69,7 @@ def get_config():
         "figures_dir": "figures",
 
         # Random seed
-        "seed": 2021,
+        "seed": 2025,
 
         # Device
         "device": "cuda" if torch.cuda.is_available() else "cpu",
@@ -504,7 +504,7 @@ def main():
     )
 
     parser.add_argument('--data-path', type=str,
-                       default='/home/liangce/lc/HD/1112/VesselSeg_Pytorch_MLSP/datasets/DRIVE',
+                       default='./datasets/DRIVE',
                        help='Path to DRIVE dataset')
     parser.add_argument('--epochs', type=int, default=10,
                        help='Number of training epochs')
@@ -518,7 +518,7 @@ def main():
     parser.add_argument('--models', type=str, nargs='+',
                        default=['unet', 'unet_eam', 'transunet', 'transunet_eam'],
                        help='Models to train')
-    parser.add_argument('--seed', type=int, default=2021,
+    parser.add_argument('--seed', type=int, default=2025,
                        help='Random seed')
     parser.add_argument('--output-dir', type=str, default='.',
                        help='Output directory for results')
